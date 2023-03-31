@@ -41,12 +41,12 @@ def predicttext(request):
             image = cv2.imread(img_path)
             image = cv2.resize(image, size)
 
-        image = cv2.imread(r"C:\Users\Admin\OCR\media\hand'.png") 
+        image = cv2.imread(r"C:\Users\Admin\OCR\media\hand.png") 
         # cv2.imshow("IMAGE", image)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
         avb_langs = pt.get_languages(config='hin')
-        path = create_path(r"C:\Users\Admin\OCR\media\hand'.png")
+        path = create_path(r"C:\Users\Admin\OCR\media\hand.png")
         image = Image.open(path)
         
         text = pt.image_to_string(image, lang='hin')
